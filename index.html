@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Tchatch</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="icomoon/style.css">
+
+		<link rel="stylesheet" type="text/css" href="foundation/css/foundation.css">
+		<script type="text/javascript" src="foundation/js/vendor/jquery.js"></script>
+		<script type="text/javascript" src="foundation/js/vendor/modernizr.js"></script>
+		<script type="text/javascript" src="foundation/js/foundation.min.js"></script>
+
+		<script type="text/javascript" src="lib/main.js"></script>
+		<script type="text/javascript" src="lib/auth.js"></script>
+		<script type="text/javascript" src="lib/chat.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<ul id="navigation" class="tabs" data-tab role="tablist">
+			<li class="tab-title active" role="presentational" ><a href="#start" role="tab" tabindex="0" aria-selected="true" controls="start"><span class="icon-home"></span> Start</a></li>
+			<li class="tab-title" role="presentational" ><a href="#server" role="tab" tabindex="0" aria-selected="false" controls="server" id="opentabserver"><span class="icon-twitch"></span> Server</a></li>
+		</ul>
+		<div id="content" class="tabs-content" style="padding:10px;">
+			<section role="tabpanel" aria-hidden="false" class="content active" id="start">
+				Eingeloggt als <span id="userinfo_displayname">[Noch nicht eingeloggt]</span>.<br>
+				<div class="row" style="margin-top:10px;">
+					<div class="large-12 columns">
+						<div class="row collapse">
+							<div class="small-10 columns">
+								<input type="text" id="joinchannel" placeholder="Channelname" disabled>
+							</div>
+							<div class="small-2 columns">
+								<a id="joinbutton" class="button postfix">Beitreten</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section role="tabpanel" aria-hidden="true" class="content" id="server">
+				
+			</section>
+		</div>
+		<footer>
+			<span id="status">Lade Dokument...</span>
+			<a class="button tiny disabled">Stream anzeigen</a>
+		</footer>
+
+		<script type="text/javascript">
+			$(document).foundation();
+		</script>
+	</body>
+</html>

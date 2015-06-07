@@ -1,0 +1,90 @@
+html, body {
+	height: auto;
+}
+body {
+	margin-bottom: 30px;
+}
+
+body::-webkit-scrollbar {
+	width: 5px;
+}
+body::-webkit-scrollbar-track {
+	background-color: rgba(0,0,0, 0.2);
+}
+body::-webkit-scrollbar-thumb {
+	background-color: rgba(0,0,0, 0.5);
+}
+
+ul#navigation {
+	position: fixed;
+	z-index: 20;
+	top: 0;
+	left: 0;
+	right: 0;
+	border-bottom: 1px solid #ddd;
+	background-color: #fff;
+	box-shadow: 0px 0px 5px rgba(0,0,0, 0.3);
+}
+
+footer {
+	background-color: #fff;
+	color: #aaa;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 10px;
+	position: fixed;
+	z-index: 10;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	box-shadow: inset 0px 0px 5px rgba(0,0,0, 0.3);
+}
+footer .button {
+	float: right;
+	margin-left: 10px;
+}
+
+.content.channel {
+	padding-right: 220px;
+	margin-bottom: 30px;
+}
+.content.channel .postmessage {
+	position: fixed;
+	bottom: 30px;
+	left: 0;
+	right: 220px;
+	height: 30px;
+	line-height: 30px;
+	margin: 0;
+}
+.content.channel iframe {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 220px;
+	width: 620px;
+	height: 378px;
+}
+.userlist {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 30px;
+	background-color: #fff;
+	z-index: 1;
+	width: 220px;
+	box-shadow: 0px 0px 5px rgba(0,0,0, 0.3);
+	overflow: auto;
+	padding: 10px;
+}
+
+#server .message {
+	font-family: monospace;
+}
+.message .nick {
+	font-weight: bold;
+}
+.message.server {
+	color: #888;
+}

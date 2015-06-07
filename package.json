@@ -1,0 +1,11 @@
+{
+	"name": "Tchatch",
+	"main": "index.html",
+	"window": {
+		"title": "Tchatch",
+		"toolbar": true
+	},
+	"webkit": {
+		"plugin": true
+	}
+}
