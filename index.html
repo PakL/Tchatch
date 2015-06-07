@@ -38,6 +38,11 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="panel callout radius">
+					Im Channel-Popout-Fenster kannst du F11 drücken um in den Fullscreen zu wechseln.<br>
+					Aufgrund von Limitierungen von NW.js funktioniert der Fullscreen-Button im Twitch-Player nicht.
+				</div>
 			</section>
 			<section role="tabpanel" aria-hidden="true" class="content" id="server">
 				
@@ -45,7 +50,8 @@
 		</div>
 		<footer>
 			<span id="status">Lade Dokument...</span>
-			<a class="button tiny disabled">Stream anzeigen</a>
+			<a class="button tiny disabled" id="showstream">Stream anzeigen</a>
+			<a class="button tiny disabled" id="popoutstream">Stream in neuem Fenster</a>
 		</footer>
 
 		<script type="text/javascript">

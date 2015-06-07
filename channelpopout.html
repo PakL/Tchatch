@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Channel Popout</title>
+		<style type="text/css">
+			html, body {
+				margin: 0;
+				padding: 0;
+			}
+			iframe {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+			input {
+				position: absolute;
+				margin-left: -500px;
+			}
+		</style>
+		<script type="text/javascript" src="foundation/js/vendor/jquery.js"></script>
+	</head>
+	<body>
+		<input type="text" id="dummy" value="">
+		<script type="text/javascript">
+			var gui = require("nw.gui");
+			var requestfocus = function() {
+				document.body.tabIndex = 0;
+				document.body.focus();
+				window.setTimeout(requestfocus, 1000);
+			};
+			requestfocus();
+			$(document).keyup(function(e){
+				if(e.which == 122) {
+					gui.Window.get().toggleFullscreen();
+				}
+			});
+			document.write('<iframe frameborder="0" scrolling="no" nwdisable nwfaketop src="http://www-cdn.jtvnw.net/swflibs/TwitchPlayer.swf'+document.location.search+'"></iframe>');
+		</script>
+	</body>
+</html>
