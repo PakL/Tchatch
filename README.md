@@ -18,7 +18,7 @@ Tchatch ist eine Twitch-Chat-Oberfläche programmiert in JavaScript.
 	/*
 	* -------------------------------------------------------------------------------------------
 	* "THE BEER-WARE LICENSE" (Revision 42):
-	* <webmaster@paklweb.de> schrieb diese Datei. Solange Sie diesen Vermerk nicht entfernen,
+	* <webmaster@paklweb.de> schrieb dieses Programm. Solange Sie diesen Vermerk nicht entfernen,
 	* können Sie mit dem Material machen, was Sie möchten. Wenn wir uns eines Tages treffen und 
 	* Sie denken, das Material ist es wert, können Sie mir (Pascal Pohl) dafür ein Bier ausgeben.
 	* -------------------------------------------------------------------------------------------
