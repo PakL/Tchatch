@@ -1,6 +1,7 @@
 {
 	"name": "Tchatch",
 	"main": "index.html",
+	"version": "0.1.0",
 	"window": {
 		"title": "Tchatch",
 		"toolbar": true
