@@ -1,0 +1,46 @@
+body {
+	background: #222;
+	color: #ddd;
+}
+
+
+ul#navigation {
+	background: #222;
+	border-bottom: 1px solid #000;
+}
+.tabs dd > a, .tabs .tab-title > a {
+	background: #323232;
+	color: #ddd;
+}
+.tabs dd.active a, .tabs .tab-title.active a {
+	background: #222;
+	color: #ddd;
+}
+.tabs dd > a:hover, .tabs .tab-title > a:hover {
+	background: #434343;
+	color: #ddd;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+	background: #222;
+	border-color: #000;
+	color: #ccc;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="color"]:focus, textarea:focus {
+	background: #323232;
+	border-color: #000;
+	outline: none;
+}
+
+#channel_game {
+	border-top: 1px solid #000;
+}
+
+.userlist {
+	background: #222;
+}
+
+footer {
+	background-color: #222;
+}

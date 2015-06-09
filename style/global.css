@@ -76,6 +76,8 @@ footer .button {
 	height: 30px;
 	line-height: 30px;
 	margin: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .content.channel iframe {
 	position: fixed;
