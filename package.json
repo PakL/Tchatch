@@ -4,7 +4,9 @@
 	"version": "0.1.0",
 	"window": {
 		"title": "Tchatch",
-		"toolbar": true
+		"toolbar": true,
+		"width": 860,
+		"height": 600
 	},
 	"webkit": {
 		"plugin": true
