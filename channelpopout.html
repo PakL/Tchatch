@@ -24,18 +24,28 @@
 		<input type="text" id="dummy" value="">
 		<script type="text/javascript">
 			var gui = require("nw.gui");
-			var requestfocus = function() {
-				document.body.tabIndex = 0;
-				document.body.focus();
-				window.setTimeout(requestfocus, 1000);
-			};
-			requestfocus();
-			$(document).keyup(function(e){
-				if(e.which == 122) {
-					gui.Window.get().toggleFullscreen();
-				}
+			var win = gui.Window.get();
+
+			var shortcut = new gui.Shortcut({ key : "F11" });
+			shortcut.on("active", function(){
+				win.toggleFullscreen();
 			});
-			document.write('<iframe frameborder="0" scrolling="no" nwdisable nwfaketop src="http://www-cdn.jtvnw.net/swflibs/TwitchPlayer.swf'+document.location.search+'"></iframe>');
+
+			win.on("focus", function(){
+				gui.App.registerGlobalHotKey(shortcut);
+			});
+			win.on("blur", function(){
+				gui.App.unregisterGlobalHotKey(shortcut);
+			});
+			win.on("close", function(){
+				this.hide();
+				gui.App.unregisterGlobalHotKey(shortcut);
+				this.close(true);
+			});
+
+			win.focus();
+
+			document.write('<iframe frameborder="0" scrolling="no" nwdisable nwfaketop allowFullscreen src="http://www-cdn.jtvnw.net/swflibs/TwitchPlayer.swf'+document.location.search+'"></iframe>');
 		</script>
 	</body>
 </html>
