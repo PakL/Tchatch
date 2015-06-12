@@ -13,15 +13,10 @@
 				width: 100%;
 				height: 100%;
 			}
-			input {
-				position: absolute;
-				margin-left: -500px;
-			}
 		</style>
-		<script type="text/javascript" src="foundation/js/vendor/jquery.js"></script>
+		<script type="text/javascript" src="../foundation/js/vendor/jquery.js"></script>
 	</head>
 	<body>
-		<input type="text" id="dummy" value="">
 		<script type="text/javascript">
 			var gui = require("nw.gui");
 			var win = gui.Window.get();
@@ -45,7 +40,7 @@
 
 			win.focus();
 
-			document.write('<iframe frameborder="0" scrolling="no" nwdisable nwfaketop allowFullscreen src="http://www-cdn.jtvnw.net/swflibs/TwitchPlayer.swf'+document.location.search+'"></iframe>');
+			document.write('<iframe frameborder="0" scrolling="no" src="http://www-cdn.jtvnw.net/swflibs/TwitchPlayer.swf'+document.location.search+'"></iframe>');
 		</script>
 	</body>
 </html>
