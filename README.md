@@ -4,6 +4,7 @@ Tchatch ist eine Twitch-Chat-Oberfläche programmiert in JavaScript.
 ### Erstellt mit Hilfe von
 * [Foundation](http://foundation.zurb.com/)
 * [Icomoon Icons](http://icomoon.io/)
+* [Chart.js](http://www.chartjs.org/)
 * [Node.js](http://nodejs.org/)
 * [NW.js](http://nwjs.io/)
 
