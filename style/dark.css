@@ -1,17 +1,19 @@
-body, table {
+body, table, .reveal-modal {
 	background: #222;
 	color: #ddd;
 }
 table {
 	border-color: #111;
 }
-table thead, table tr.even, table tr.alt, table tr:nth-of-type(even) {
+table thead, table tfoot, table tr.even, table tr.alt, table tr:nth-of-type(even) {
 	background: #323232;
 }
-table thead tr th, table tbody tr td {
+table thead tr th, table tbody tr td, table tfoot tr td {
 	color: #ddd;
 }
-
+h1, h2, h3, h4, h5, h6 {
+	color: #ddd;
+}
 
 ul#navigation {
 	background: #222;

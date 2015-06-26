@@ -13,6 +13,7 @@
 		<script type="text/javascript" src="foundation/js/foundation.min.js"></script>
 
 		<script type="text/javascript" src="lib/main.js"></script>
+		<script type="text/javascript" src="lib/options.js"></script>
 		<script type="text/javascript" src="lib/auth.js"></script>
 		<script type="text/javascript" src="lib/chat.js"></script>
 
@@ -44,23 +45,50 @@
 
 				<div class="panel callout radius">
 					Im Channel-Popout-Fenster kannst du F11 drücken um in den Fullscreen zu wechseln.<br>
-					Aufgrund von Limitierungen von NW.js funktioniert der Fullscreen-Button im Twitch-Player nicht.
+					Aufgrund von Limitierungen von NW.js funktioniert der Fullscreen-Button im Twitch-Player nicht.<br>
+					<br>
+					In der Linux-Version funktioniert das Flash-Plugin nicht obwohl installiert. Daher funktionert der Twitch-Player nicht. Daran kann ich nichts ändern. Möglicherweise kommt irgendwann eine NW.js-Version in der das funktioniert.
 				</div>
-				<div class="row" style="margin-top:10px;">
-					<div class="large-12 columns">
-						<div class="row collapse">
-							<div class="small-1 columns">
-								<div class="switch tiny">
-									<input type="checkbox" id="darkswitcher">
-									<label for="darkswitcher">Dunkles Design</label>
-								</div>
-							</div>
-							<div class="small-11 columns">
-								Dunkles Design
+				<fieldset>
+					<legend>Optionen</legend>
+					<div class="row">
+						<div class="small-1 columns">
+							<div class="switch tiny">
+								<input type="checkbox" id="darkswitcher">
+								<label for="darkswitcher">Dunkles Design</label>
 							</div>
 						</div>
+						<div class="small-11 columns">
+							<label for="darkswitcher">Dunkles Design</label>
+						</div>
 					</div>
-				</div>
+					<div class="row">
+						<div class="small-12 columns">
+							<a class="button" data-reveal-id="highlightOptions">Highlights einstellen</a>
+						</div>
+					</div>
+					<div id="highlightOptions" class="reveal-modal" data-reveal aria-labelledby="highlightTitle" aria-hidden="true" role="dialog">
+						<h2 id="highlightTitle">Highlights</h2>
+						<p>Stelle Highlights ein, um Wörter oder Nachrichten für dich hervorzuheben.</p>
+						<table style="width:100%;">
+							<thead>
+								<tr>
+									<th>Suche nach (Regex)</th>
+									<th>Wort hervorheben</th>
+									<th>Ganze Nachricht</th>
+									<th>Farbe</th>
+									<th><span class="icon-bin"></span></th>
+								</tr>
+							</thead>
+							<tfoot>
+								<tr><td colspan="5" style="text-align:right;"><a class="button tiny" style="margin:0;" id="optHighlightAdd">Highlight hinzufügen</a></td></tr>
+							</tfoot>
+							<tbody id="optHighlightData">
+							</tbody>
+						</table>
+						<a class="close-reveal-modal" aria-label="Schließen">&#215;</a>
+					</div>
+				</fieldset>
 			</section>
 			<section role="tabpanel" aria-hidden="true" class="content" id="server">
 				

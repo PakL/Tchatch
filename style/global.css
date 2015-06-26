@@ -123,3 +123,6 @@ footer .button {
 .message.server {
 	color: #888;
 }
+.switch {
+	margin-bottom: 0;
+}
