@@ -11,7 +11,8 @@ Tchatch ist eine Twitch-Chat-Oberfläche programmiert in JavaScript.
 ### Node.js Dependencies
 
 	"dependencies": {
-		"irc": ">=0.3.12"
+		"irc": ">=0.3.12",
+		"irc-message": >= "3.0.1"
 	}
 
 ### Lizenz
