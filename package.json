@@ -1,7 +1,7 @@
 {
 	"name": "Tchatch",
 	"main": "index.html",
-	"version": "0.3.1",
+	"version": "0.3.2",
 	"window": {
 		"title": "Tchatch",
 		"icon": "icon.png",
