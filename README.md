@@ -28,4 +28,4 @@ Tchatch ist eine Twitch-Chat-Oberfläche programmiert in JavaScript.
 
 ### Screenshots
 ![Tchatch Chat-Ansicht mit Stream](https://dl.dropboxusercontent.com/u/16631598/tchatch_screenshot.jpg)
-![Tchatch Channel-Manager](https://dl.dropboxusercontent.com/u/16631598/tchatch_screenshot2.jpg)
+![Tchatch Channel-Manager](https://dl.dropboxusercontent.com/u/16631598/tchatch_screenshot_2.jpg)
