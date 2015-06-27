@@ -4,6 +4,7 @@
 	"version": "0.3.0",
 	"window": {
 		"title": "Tchatch",
+		"icon": "icon.png",
 		"toolbar": true,
 		"width": 860,
 		"height": 600
