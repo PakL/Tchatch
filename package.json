@@ -9,6 +9,11 @@
 		"width": 860,
 		"height": 600
 	},
+	"platformOverrides": {
+		"win": { "window": { "toolbar": false }},
+		"osx": { "window": { "toolbar": false }},
+		"linux": { "window": { "toolbar": false }}
+	},
 	"webkit": {
 		"plugin": true
 	}
