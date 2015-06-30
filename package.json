@@ -1,7 +1,22 @@
 {
 	"name": "Tchatch",
-	"main": "index.html",
-	"version": "0.3.2",
+	"description": "Twitch.tv chat client build with JavaScript",
+	"version": "0.4.0",
+	"maintainers": [{
+		"name": "Pascal Pohl",
+		"email": "pakl@paklweb.de",
+		"web": "http://pakl.github.io/"
+	}],
+	"contributors": [{
+		"name": "Pascal Pohl",
+		"email": "pakl@paklweb.de",
+		"web": "http://pakl.github.io/"
+	}],
+	"bugs": "https://github.com/PakL/Tchatch/issues",
+	"repositories": [{
+		"type": "git",
+		"url": "https://github.com/PakL/Tchatch.git"
+	}],
 	"window": {
 		"title": "Tchatch",
 		"icon": "icon.png",
@@ -9,12 +24,15 @@
 		"width": 860,
 		"height": 600
 	},
+
+	"main": "index.html",
+	"single-instance": false,
+	"webkit": {
+		"plugin": true
+	},
 	"platformOverrides": {
 		"win": { "window": { "toolbar": false }},
 		"osx": { "window": { "toolbar": false }},
 		"linux": { "window": { "toolbar": false }}
-	},
-	"webkit": {
-		"plugin": true
 	}
 }
