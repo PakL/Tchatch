@@ -13,6 +13,9 @@
 		<script type="text/javascript" src="../foundation/js/foundation.min.js"></script>
 
 		<script type="text/javascript" src="../chart.js/Chart.min.js"></script>
+		
+		<script type="text/javascript">var fs = require("fs");</script>
+		<script type="text/javascript" src="../lib/lang.js"></script>
 
 		<style type="text/css">
 			body {
@@ -37,17 +40,17 @@
 		<div class="row">
 			<div class="columns large-12">
 				<div style="height:200px;width:100%;overflow:hidden;"><canvas style="" id="viewerchart"></canvas></div>
-				Viewer: <span id="viewercount">0</span>
+				<span class="lang lang_viewer">Viewer</span>: <span id="viewercount">0</span>
 			</div>
 		</div>
 		<div class="row">
 			<div class="columns large-6" id="canvascolumn">
 				<label>
-					Status:
+					<span class="lang lang_channel_status"></span>:
 					<input type="text" id="new_channel_status" readonly>
 				</label>
 				<label>
-					Spiel:
+					<span class="lang lang_channel_game"></span>:
 					<input type="text" id="new_channel_game" list="gamesearch" readonly>
 					<datalist id="gamesearch"></datalist>
 				</label>
@@ -56,8 +59,8 @@
 				<table>
 					<thead>
 						<tr>
-							<th>Nick</th>
-							<th>Folgt seit</th>
+							<th><span class="lang lang_nick"></span></th>
+							<th><span class="lang lang_following_since"></span></th>
 						</tr>
 					</thead>
 					<tbody id="follower"></tbody>
@@ -93,7 +96,7 @@
 			var viewerchart = new Chart(ctx).Line({
 				labels: [],
 				datasets: [{
-					label: "Viewer über Zeit",
+					label: getTranslation("viewer_over_time"),
 					fillColor: "rgba(220,220,220,0.2)",
 					strokeColor: "rgba(220,220,220,1)",
 					pointColor: "rgba(220,220,220,1)",
@@ -295,6 +298,10 @@
 				});
 			};
 			loadFollower();
+
+
+			$(document).foundation();
+			fillLanguage();
 		</script>
 	</body>
 </html>
