@@ -13,6 +13,7 @@
 		<script type="text/javascript" src="foundation/js/foundation.min.js"></script>
 
 		<script type="text/javascript" src="lib/main.js"></script>
+		<script type="text/javascript" src="lib/lang.js"></script>
 		<script type="text/javascript" src="lib/options.js"></script>
 		<script type="text/javascript" src="lib/auth.js"></script>
 		<script type="text/javascript" src="lib/chat.js"></script>
@@ -21,90 +22,98 @@
 	</head>
 	<body>
 		<ul id="navigation" class="tabs" data-tab role="tablist">
-			<li class="tab-title active" role="presentational" ><a href="#start" role="tab" tabindex="0" aria-selected="true" controls="start"><span class="icon-home"></span> Start</a></li>
-			<li class="tab-title" role="presentational" ><a href="#server" role="tab" tabindex="0" aria-selected="false" controls="server" id="opentabserver"><span class="icon-twitch"></span> Server</a></li>
-			<li id="channel_game">Channel ist Offline</li>
-			<li id="channel_status">Offline</li>
+			<li class="tab-title active" role="presentational" ><a href="#start" role="tab" tabindex="0" aria-selected="true" controls="start"><span class="icon-home"></span> <span class="lang lang_start"></span></a></li>
+			<li class="tab-title" role="presentational" ><a href="#server" role="tab" tabindex="0" aria-selected="false" controls="server" id="opentabserver"><span class="icon-twitch"></span> <span class="lang lang_server"></span></a></li>
+			<li id="channel_game"><span class="lang lang_channel_offline"></span></li>
+			<li id="channel_status"></li>
 			<li id="channel_viewers">0</li>
 		</ul>
 		<div id="content" class="tabs-content" style="padding:10px;">
 			<section role="tabpanel" aria-hidden="false" class="content active" id="start">
-				Eingeloggt als <span id="userinfo_displayname">[Noch nicht eingeloggt]</span>.<br>
+				<span class="lang lang_logged_in_as"></span> <span id="userinfo_displayname"><span class="lang lang_not_logged_in"></span></span>.<br>
 				<div class="row" style="margin-top:10px;">
 					<div class="large-12 columns">
 						<div class="row collapse">
 							<div class="small-10 columns">
-								<input type="text" id="joinchannel" placeholder="Channelname" disabled>
+								<input type="text" id="joinchannel" disabled>
 							</div>
 							<div class="small-2 columns">
-								<a id="joinbutton" class="button postfix">Beitreten</a>
+								<a id="joinbutton" class="button postfix"><span class="lang lang_join"></span></a>
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="panel radius" id="checkforupdate">
-					Bitte warten...
+					<span class="lang lang_please_wait"></span>...
 				</div>
 
 				<div class="panel callout radius">
-					Im Channel-Popout-Fenster kannst du F11 drücken um in den Fullscreen zu wechseln.<br>
-					Aufgrund von Limitierungen von NW.js funktioniert der Fullscreen-Button im Twitch-Player nicht.<br>
-					<br>
-					In der Linux-Version funktioniert das Flash-Plugin nicht obwohl installiert. Daher funktionert der Twitch-Player nicht. Daran kann ich nichts ändern. Möglicherweise kommt irgendwann eine NW.js-Version in der das funktioniert.
+					<spn class="lang lang_start_infobox"></span>
 				</div>
 				<fieldset>
-					<legend>Optionen</legend>
+					<legend><span class="lang lang_settings"></span></legend>
+					<div class="row">
+						<div class="small-2 columns">
+
+						</div>
+						<div class="small-12 columns">
+							<label>
+								<span class="lang lang_language"></span>
+								<select id="languageswitch"></select>
+							</label>
+						</div>
+					</div>
 					<div class="row">
 						<div class="small-1 columns">
 							<div class="switch tiny">
 								<input type="checkbox" id="darkswitcher">
-								<label for="darkswitcher">Dunkles Design</label>
+								<label for="darkswitcher"><span class="lang lang_dark_design"></span></label>
 							</div>
 						</div>
 						<div class="small-11 columns">
-							<label for="darkswitcher">Dunkles Design</label>
+							<label for="darkswitcher"><span class="lang lang_dark_design"></span></label>
 						</div>
 					</div>
 					<div class="row">
 						<div class="small-1 columns">
 							<div class="switch tiny">
 								<input type="checkbox" id="historyswitch">
-								<label for="historyswitch">Chat-Verlauf aufzeichnen</label>
+								<label for="historyswitch"><span class="lang lang_record_history"></span></label>
 							</div>
 						</div>
 						<div class="small-4 columns">
-							<label for="historyswitch">Chat-Verlauf aufzeichnen</label>
+							<label for="historyswitch"><span class="lang lang_record_history"></span></label>
 						</div>
 						<div class="small-7 columns">
-							<a class="button tiny" id="openhistory">Ordner mit den Verläufen öffnen</a>
+							<a class="button tiny" id="openhistory"><span class="lang lang_open_history_folder"></span></a>
 						</div>
 					</div>
 					<div class="row">
 						<div class="small-12 columns">
-							<a class="button" data-reveal-id="highlightOptions">Highlights einstellen</a>
+							<a class="button" data-reveal-id="highlightOptions"><span class="lang lang_set_highlights"></span></a>
 						</div>
 					</div>
 					<div id="highlightOptions" class="reveal-modal" data-reveal aria-labelledby="highlightTitle" aria-hidden="true" role="dialog">
-						<h2 id="highlightTitle">Highlights</h2>
-						<p>Stelle Highlights ein, um Wörter oder Nachrichten für dich hervorzuheben.</p>
+						<h2 id="highlightTitle"><span class="lang lang_hightlights"></span></h2>
+						<p><span class="lang lang_highlight_info"></span></p>
 						<table style="width:100%;">
 							<thead>
 								<tr>
-									<th>Suche nach (Regex)</th>
-									<th>Wort hervorheben</th>
-									<th>Ganze Nachricht</th>
-									<th>Farbe</th>
+									<th><span class="lang lang_highlight_search_for"></span></th>
+									<th><span class="lang lang_highlight_word"></span></th>
+									<th><span class="lang lang_highlight_message"></span></th>
+									<th><span class="lang lang_highlight_color"></span></th>
 									<th><span class="icon-bin"></span></th>
 								</tr>
 							</thead>
 							<tfoot>
-								<tr><td colspan="5" style="text-align:right;"><a class="button tiny" style="margin:0;" id="optHighlightAdd">Highlight hinzufügen</a></td></tr>
+								<tr><td colspan="5" style="text-align:right;"><a class="button tiny" style="margin:0;" id="optHighlightAdd"><span class="lang lang_add_highlight"></span></a></td></tr>
 							</tfoot>
 							<tbody id="optHighlightData">
 							</tbody>
 						</table>
-						<a class="close-reveal-modal" aria-label="Schließen">&#215;</a>
+						<a class="close-reveal-modal">&#215;</a>
 					</div>
 				</fieldset>
 			</section>
@@ -113,14 +122,15 @@
 			</section>
 		</div>
 		<footer>
-			<span id="status">Lade Dokument...</span>
-			<a class="button tiny success disabled" id="openmanager">Channel-Manager</a>
-			<a class="button tiny disabled" id="showstream">Stream anzeigen</a>
-			<a class="button tiny disabled" id="popoutstream">Stream in neuem Fenster</a>
+			<span id="status"><span class="lang lang_loading_document"></span>...</span>
+			<a class="button tiny success disabled" id="openmanager"><span class="lang lang_channel_manager"></span></a>
+			<a class="button tiny disabled" id="showstream"><span class="lang lang_show_stream"></span></a>
+			<a class="button tiny disabled" id="popoutstream"><span class="lang lang_poput_stream"></span></a>
 		</footer>
 
 		<script type="text/javascript">
 			$(document).foundation();
+			fillLanguage();
 		</script>
 	</body>
 </html>

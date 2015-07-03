@@ -1,0 +1,36 @@
+{
+	"language": "English",
+	"author": "Pascal Pohl",
+	"email": "pakl@paklweb.de",
+	"version": "0.0.1",
+	"translation": {
+		"start": "Start",
+		"server": "Server",
+		"channel_offline": "Channel is offline",
+		"offline": "Offline",
+		"logged_in_as": "Logged in as:",
+		"not_logged_in": "[Not logged in yet]",
+		"channel_name": "Channel name",
+		"join": "Join",
+		"please_wait": "Please wait",
+		"start_infobox": "With the channel popout window you can use F11 to switch into fullscreen.\nBecause of limitations of NW.js the fullscreen button in the twitch player won't work.\n\nIn the linux version the flash plugin will not work. The twitch player will not work becaus of this. I can't change that. Maybe there will be an update for NW.js to fix this.",
+		"settings": "Settings",
+		"dark_design": "Dark design",
+		"record_history": "Record history",
+		"open_history_folder": "Open saved histories folder",
+		"set_highlights": "Set highlights",
+		"highlights": "Highlights",
+		"highlight_info": "Create highlights to highlight words or messages.",
+		"highlight_search_for": "Search for (regex)",
+		"highlight_word": "Highlight word only",
+		"highlight_message": "or whole message",
+		"highlight_color": "Color",
+		"add_highlight": "Add highlight",
+		"loading_document": "Loading document",
+		"channel_manager": "Channel manager",
+		"show_stream": "Show stream",
+		"poput_stream": "Open stream in new window",
+		"language": "Language"
+
+	}
+}

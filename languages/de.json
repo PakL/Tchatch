@@ -1,0 +1,36 @@
+{
+	"language": "Deutsch",
+	"author": "Pascal Pohl",
+	"email": "pakl@paklweb.de",
+	"version": "0.0.1",
+	"translation": {
+		"start": "Start",
+		"server": "Server",
+		"channel_offline": "Channel ist Offline",
+		"offline": "Offline",
+		"logged_in_as": "Eingeloggt als:",
+		"not_logged_in": "[Noch nicht eingeloggt]",
+		"channel_name": "Kanalname",
+		"join": "Beitreten",
+		"please_wait": "Bitte warten",
+		"start_infobox": "Im Channel-Popout-Fenster kannst du F11 drücken um in den Fullscreen zu wechseln.\nAufgrund von Limitierungen von NW.js funktioniert der Fullscreen-Button im Twitch-Player nicht.\n\nIn der Linux-Version funktioniert das Flash-Plugin nicht obwohl installiert. Daher funktionert der Twitch-Player nicht. Daran kann ich nichts ändern. Möglicherweise kommt irgendwann eine NW.js-Version in der das funktioniert.",
+		"settings": "Einstellungen",
+		"dark_design": "Dunkles Design",
+		"record_history": "Chat-Verlauf aufzeichnen",
+		"open_history_folder": "Ordner mit den Verläufen öffnen",
+		"set_highlights": "Highlights einstellen",
+		"highlights": "Highlights",
+		"highlight_info": "Stelle Highlights ein, um Wörter oder Nachrichten für dich hervorzuheben.",
+		"highlight_search_for": "Suche nach (Regex)",
+		"highlight_word": "Wort hervorheben",
+		"highlight_message": "oder ganze Nachricht",
+		"highlight_color": "Farbe",
+		"add_highlight": "Highlight hinzufügen",
+		"loading_document": "Lade Dokument",
+		"channel_manager": "Kanalmanager",
+		"show_stream": "Stream anzeigen",
+		"poput_stream": "Stream in neuem Fenster",
+		"language": "Sprache"
+
+	}
+}
