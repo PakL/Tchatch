@@ -26,11 +26,30 @@
 		"highlight_message": "oder ganze Nachricht",
 		"highlight_color": "Farbe",
 		"add_highlight": "Highlight hinzufügen",
+		"color_none": "Keine",
+		"color_red": "Rot",
+		"color_green": "Grün",
+		"color_blue": "Blau",
 		"loading_document": "Lade Dokument",
 		"channel_manager": "Kanalmanager",
 		"show_stream": "Stream anzeigen",
 		"poput_stream": "Stream in neuem Fenster",
-		"language": "Sprache"
+		"language": "Sprache",
+		"loading_emoticons": "Lade Emoticons...",
+		"done": "Fertig.",
+		"error_loading_emoticons": "Fehler beim Speichern der Emoticons.",
+		"searching_update": "Suche nach Update...",
+		"version_up_to_date": "Dein Tchatch ist aktuell. Hier klicken um nach neuen Versionen zu suchen.",
+		"new_version_available": "Neue Version %s ist jetzt verfügbar",
+		"login_with_twitch": "Über %s einloggen",
+		"loading_userdata": "Lade Benutzerdaten...",
+		"joined_channel": "%s betritt Kanal",
+		"part_channel": "%s verlässt Kanal",
+		"got_mod": "%s ist jetzt Moderator",
+		"remove_mod": "%s ist kein Moderator mehr",
+		"connection_to_irc": "Verbinde zur IRC-Schnittstelle...",
+		"send_a_message": "Sende eine Nachricht",
+		"close_channel": "Kanal schließen"
 
 	}
 }

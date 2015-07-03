@@ -26,11 +26,30 @@
 		"highlight_message": "or whole message",
 		"highlight_color": "Color",
 		"add_highlight": "Add highlight",
+		"color_none": "None",
+		"color_red": "Red",
+		"color_green": "Green",
+		"color_blue": "Blue",
 		"loading_document": "Loading document",
 		"channel_manager": "Channel manager",
 		"show_stream": "Show stream",
 		"poput_stream": "Open stream in new window",
-		"language": "Language"
+		"language": "Language",
+		"loading_emoticons": "Loading emoticons...",
+		"done": "Done.",
+		"error_loading_emoticons": "Error while loading emoticons.",
+		"searching_update": "Searching for update...",
+		"version_up_to_date": "Your version is up to date. Click here to search again.",
+		"new_version_available": "A new version %s is now available",
+		"login_with_twitch": "Login with %s",
+		"loading_userdata": "Loading user information...",
+		"joined_channel": "%s joined channel",
+		"part_channel": "%s left channel",
+		"got_mod": "%s is now moderator",
+		"remove_mod": "%s is no longer moderator",
+		"connection_to_irc": "Connecting to IRC interface...",
+		"send_a_message": "Send a message",
+		"close_channel": "Close channel"
 
 	}
 }
