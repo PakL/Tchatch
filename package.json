@@ -4,10 +4,10 @@
 	"version": "0.4.0",
 	"author": "Pascal Pohl <pakl@paklweb.de>",
 	"bugs": "https://github.com/PakL/Tchatch/issues",
-	"repositories": [{
+	"repository": {
 		"type": "git",
 		"url": "https://github.com/PakL/Tchatch.git"
-	}],
+	},
 
 	"main": "index.html",
 	"single-instance": false,
