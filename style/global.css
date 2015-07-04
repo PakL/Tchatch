@@ -159,7 +159,7 @@ footer .button {
 .message .nick {
 	font-weight: bold;
 }
-.message.server {
+.message.server, .dmsg.server {
 	color: #888;
 }
 .switch {

@@ -70,7 +70,9 @@
 		"timeout_twenty": "20 minutes",
 		"timeout_thirty": "30 minutes",
 		"timeout_clear": "Clear messages only",
-		"ban": "Ban"
+		"ban": "Ban",
+		"clear_chat_switch": "Allow chat clearing",
+		"message_deleted": "<<Message was deleted>>"
 
 	}
 }

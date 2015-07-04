@@ -70,7 +70,9 @@
 		"timeout_twenty": "20 Minuten",
 		"timeout_thirty": "30 Minuten",
 		"timeout_clear": "Nur Nachrichten entfernen",
-		"ban": "Bannen"
+		"ban": "Bannen",
+		"clear_chat_switch": "Chat-Fenster leeren zulassen",
+		"message_deleted": "<<Nachricht wurde gelöscht>>"
 
 	}
 }
