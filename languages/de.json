@@ -63,7 +63,14 @@
 		"notice_r9k_on": "Dieser Raum ist jetzt im R9K-Modus.",
 		"notice_r9k_off": "Dieser Raum ist nicht länger im R9K-Modus.",
 		"notice_host_on": "Es wird %s gehostet.",
-		"notice_host_off": "Host-Modus verlassen."
+		"notice_host_off": "Host-Modus verlassen.",
+		"timeout": "Auszeit",
+		"timeout_five": "5 Minuten",
+		"timeout_ten": "10 Minuten",
+		"timeout_twenty": "20 Minuten",
+		"timeout_thirty": "30 Minuten",
+		"timeout_clear": "Nur Nachrichten entfernen",
+		"ban": "Bannen"
 
 	}
 }

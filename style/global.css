@@ -153,6 +153,9 @@ footer .button {
 #server .message {
 	font-family: monospace;
 }
+.nick {
+	cursor: pointer;
+}
 .message .nick {
 	font-weight: bold;
 }
