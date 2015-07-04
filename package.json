@@ -9,7 +9,8 @@
 		"url": "https://github.com/PakL/Tchatch.git"
 	},
 	"dependencies": {
-		"websocket": "=1.0.19"
+		"websocket": "=1.0.19",
+		"randexp": "=0.4.0"
 	},
 
 	"main": "index.html",
