@@ -1,7 +1,7 @@
 {
 	"name": "Tchatch",
 	"description": "Twitch.tv chat client build with JavaScript",
-	"version": "0.4.0",
+	"version": "0.5.0",
 	"author": "Pascal Pohl <pakl@paklweb.de>",
 	"bugs": "https://github.com/PakL/Tchatch/issues",
 	"repository": {
