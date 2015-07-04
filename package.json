@@ -8,6 +8,9 @@
 		"type": "git",
 		"url": "https://github.com/PakL/Tchatch.git"
 	},
+	"dependencies": {
+		"websocket": "=1.0.19"
+	},
 
 	"main": "index.html",
 	"single-instance": false,

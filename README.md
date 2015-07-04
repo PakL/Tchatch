@@ -11,8 +11,7 @@ Tchatch ist eine Twitch-Chat-Oberfläche programmiert in JavaScript.
 ### Node.js Dependencies
 
 	"dependencies": {
-		"irc": ">=0.3.12",
-		"irc-message": >= "3.0.1"
+		"websocket": "=1.0.19"
 	}
 
 ### Lizenz
@@ -21,7 +20,7 @@ Tchatch ist eine Twitch-Chat-Oberfläche programmiert in JavaScript.
 	* -------------------------------------------------------------------------------------------
 	* "THE BEER-WARE LICENSE" (Revision 42):
 	* <webmaster@paklweb.de> schrieb dieses Programm. Solange Sie diesen Vermerk nicht entfernen,
-	* können Sie mit dem Material machen, was Sie möchten. Wenn wir uns eines Tages treffen und 
+	* können Sie mit dem Material machen, was Sie möchten. Wenn wir uns eines Tages treffen und
 	* Sie denken, das Material ist es wert, können Sie mir (Pascal Pohl) dafür ein Bier ausgeben.
 	* -------------------------------------------------------------------------------------------
 	*/
