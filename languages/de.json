@@ -55,7 +55,15 @@
 		"channel_game": "Spiel",
 		"nick": "Nick",
 		"following_since": "Folgt seit",
-		"viewer_over_time": "Zuschauer über Zeit"
+		"viewer_over_time": "Zuschauer über Zeit",
+		"notice_subs_on": "Dieser Raum ist jetzt im Nur-Abbonenten-Modus.",
+		"notice_subs_off": "Dieser Raum ist nicht mehr im Nur-Abbonenten-Modus.",
+		"notice_slow_on": "Dieser Raum ist jetzt im langsamen Modus. Du kannst nur noch alle %s Sekunden schreiben.",
+		"notice_slow_off": "Dieser Raum ist nicht länge im langsamen Modus.",
+		"notice_r9k_on": "Dieser Raum ist jetzt im R9K-Modus.",
+		"notice_r9k_off": "Dieser Raum ist nicht länger im R9K-Modus.",
+		"notice_host_on": "Es wird %s gehostet.",
+		"notice_host_off": "Host-Modus verlassen."
 
 	}
 }

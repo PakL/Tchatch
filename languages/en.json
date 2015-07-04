@@ -55,7 +55,15 @@
 		"channel_game": "Game",
 		"nick": "Nick",
 		"following_since": "Following since",
-		"viewer_over_time": "Viewer over time"
+		"viewer_over_time": "Viewer over time",
+		"notice_subs_on": "This room is now in subscribers-only mode.",
+		"notice_subs_off": "This room is no longer in subscribers-only mode.",
+		"notice_slow_on": "This room is now in slow mode. You may send messages every %s seconds.",
+		"notice_slow_off": "This room is no longer in slow mode.",
+		"notice_r9k_on": "This room is now in r9k mode.",
+		"notice_r9k_off": "This room is no longer in r9k mode.",
+		"notice_host_on": "Now hosting %s.",
+		"notice_host_off": "Exited host mode."
 
 	}
 }
