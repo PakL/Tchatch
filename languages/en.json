@@ -72,7 +72,10 @@
 		"timeout_clear": "Clear messages only",
 		"ban": "Ban",
 		"clear_chat_switch": "Allow chat clearing",
-		"message_deleted": "<<Message was deleted>>"
+		"message_deleted": "<<Message was deleted>>",
+		"please_login": "Please login via Twitch with the button on the start page",
+		"login_unsatisfying": "Not enough rights...",
+		"login_failed": "Login failed."
 
 	}
 }

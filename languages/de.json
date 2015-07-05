@@ -72,7 +72,10 @@
 		"timeout_clear": "Nur Nachrichten entfernen",
 		"ban": "Bannen",
 		"clear_chat_switch": "Chat-Fenster leeren zulassen",
-		"message_deleted": "<<Nachricht wurde gelöscht>>"
+		"message_deleted": "<<Nachricht wurde gelöscht>>",
+		"please_login": "Bitte via Twitch einloggen mit dem Button auf der Startseite",
+		"login_unsatisfying": "Nicht genug Rechte...",
+		"login_failed": "Login fehlgeschlagen."
 
 	}
 }
