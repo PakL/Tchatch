@@ -82,6 +82,9 @@ footer .button {
 	padding-right: 220px;
 	margin-bottom: 30px;
 }
+.content.channel.user {
+	padding-right: 0px;
+}
 .content.channel .postmessage {
 	position: fixed;
 	bottom: 30px;
@@ -93,6 +96,9 @@ footer .button {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
+.content.channel.user .postmessage {
+	padding-right: 25px;
+}
 .content.channel .emoticonbtn {
 	position: fixed;
 	bottom: 30px;
@@ -101,6 +107,9 @@ footer .button {
 	height: 30px;
 	text-align: center;
 	line-height: 34px;
+}
+.content.channel.user .emoticonbtn {
+	right: 5px;
 }
 .content.channel .emoticons {
 	border: 1px solid #cccccc;
@@ -114,6 +123,9 @@ footer .button {
 	text-align: center;
 	overflow: auto;
 	display: none;
+}
+.content.channel.user .emoticons {
+	right: 5px;
 }
 .content.channel .emoticons a {
 	display: inline-block;
