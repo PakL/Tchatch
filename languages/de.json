@@ -76,7 +76,8 @@
 		"please_login": "Bitte via Twitch einloggen mit dem Button auf der Startseite",
 		"login_unsatisfying": "Nicht genug Rechte...",
 		"login_failed": "Login fehlgeschlagen.",
-		"start_whisper": "Anflüstern"
+		"start_whisper": "Anflüstern",
+		"you_can_whisper_now": "Du kannst jetzt flüstern"
 
 	}
 }
