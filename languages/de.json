@@ -77,7 +77,8 @@
 		"login_unsatisfying": "Nicht genug Rechte...",
 		"login_failed": "Login fehlgeschlagen.",
 		"start_whisper": "Anflüstern",
-		"you_can_whisper_now": "Du kannst jetzt flüstern"
+		"you_can_whisper_now": "Du kannst jetzt flüstern",
+		"show_server_msgs_switch": "Zeige Servernachrichten im Kanalchat (zB. jmd. betritt Kanal)"
 
 	}
 }

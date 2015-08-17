@@ -77,7 +77,7 @@
 		"login_unsatisfying": "Not enough rights...",
 		"login_failed": "Login failed.",
 		"start_whisper": "Whisper to",
-		"you_can_whisper_now": "You can whisper now"
-
+		"you_can_whisper_now": "You can whisper now",
+		"show_server_msgs_switch": "Show server messages in channel chat (eg. s.o. joining channel)"
 	}
 }
