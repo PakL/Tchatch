@@ -64,6 +64,7 @@
 		"notice_r9k_off": "Dieser Raum ist nicht länger im R9K-Modus.",
 		"notice_host_on": "Es wird %s gehostet.",
 		"notice_host_off": "Host-Modus verlassen.",
+		"notice_color_changed": "Deine Farbe wurde geändert.",
 		"timeout": "Auszeit",
 		"timeout_five": "5 Minuten",
 		"timeout_ten": "10 Minuten",

@@ -64,6 +64,7 @@
 		"notice_r9k_off": "This room is no longer in r9k mode.",
 		"notice_host_on": "Now hosting %s.",
 		"notice_host_off": "Exited host mode.",
+		"notice_color_changed": "Your color has been changed.",
 		"timeout": "Timeout",
 		"timeout_five": "5 minutes",
 		"timeout_ten": "10 minutes",
