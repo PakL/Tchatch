@@ -13,7 +13,7 @@
 		"channel_name": "Channel name",
 		"join": "Join",
 		"please_wait": "Please wait",
-		"start_infobox": "With the channel popout window you can use F11 to switch into fullscreen.\nBecause of limitations of NW.js the fullscreen button in the twitch player won't work.\n\nIn the linux version the flash plugin will not work. The twitch player will not work becaus of this. I can't change that. Maybe there will be an update for NW.js to fix this.",
+		"start_infobox": "The video player can be popped out via the player options. The fullscreen option is only working in this popped out window.\n\nI can only publish a Windows version since I only got a Windows PC and have to ship a flash plugin. As soon as twitch rolls the pure HTML5 player the shouldn't be any more problems.",
 		"settings": "Settings",
 		"dark_design": "Dark design",
 		"record_history": "Record history",
