@@ -7,15 +7,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="icomoon/style.css">
 
-		<link rel="stylesheet" type="text/css" href="foundation/css/foundation.css">
+		<link rel="stylesheet" type="text/css" href="foundation/foundation.min.css">
 
 		<script type="text/javascript">
 			global.localStorage = window.localStorage;
 		</script>
 
-		<script type="text/javascript" src="foundation/js/vendor/jquery.js"></script>
-		<!--<script type="text/javascript" src="foundation/js/vendor/modernizr.js"></script>-->
-		<script type="text/javascript" src="foundation/js/foundation.min.js"></script>
+		<script type="text/javascript" src="foundation/jquery.js"></script>
+		<script type="text/javascript" src="foundation/foundation.min.js"></script>
 
 		<script type="text/javascript" src="lib/main.js"></script>
 		<script type="text/javascript" src="lib/lang.js"></script>
@@ -28,15 +27,15 @@
 		<link rel="stylesheet" type="text/css" href="style/global.css">
 	</head>
 	<body>
-		<ul id="navigation" class="tabs" data-tab role="tablist">
-			<li class="tab-title active" role="presentational" ><a href="#start" role="tab" tabindex="0" aria-selected="true" controls="start"><span class="icon-home"></span> <span class="lang lang_start"></span></a></li>
-			<li class="tab-title" role="presentational" ><a href="#server" role="tab" tabindex="0" aria-selected="false" controls="server" id="opentabserver"><span class="icon-twitch"></span> <span class="lang lang_server"></span></a></li>
+		<ul id="navigation" class="tabs" data-tabs>
+			<li class="tabs-title is-active" role="presentational" ><a href="#start" aria-selected="true" controls="start"><span class="icon-home"></span> <span class="lang lang_start"></span></a></li>
+			<li class="tabs-title" role="presentational" ><a href="#server" controls="server" id="opentabserver"><span class="icon-twitch"></span> <span class="lang lang_server"></span></a></li>
 			<li id="channel_game"><span class="lang lang_channel_offline"></span></li>
 			<li id="channel_status"></li>
 			<li id="channel_viewers">0</li>
 		</ul>
-		<div id="content" class="tabs-content" style="padding:10px;">
-			<section role="tabpanel" aria-hidden="false" class="content active" id="start">
+		<div id="content" class="tabs-content" data-tabs-content="navigation" style="padding:10px;">
+			<section role="tabpanel" aria-hidden="false" class="tabs-panel content is-active" id="start">
 				<span class="lang lang_logged_in_as"></span> <span id="userinfo_displayname"><span class="lang lang_not_logged_in"></span></span>.<br>
 				<div class="row" style="margin-top:10px;">
 					<div class="large-12 columns">
@@ -51,11 +50,11 @@
 					</div>
 				</div>
 
-				<div class="panel radius" id="checkforupdate">
+				<div class="callout secondary" id="checkforupdate">
 					<span class="lang lang_please_wait"></span>...
 				</div>
 
-				<div class="panel callout radius">
+				<div class="callout">
 					<spn class="lang lang_start_infobox"></span>
 				</div>
 				<fieldset>
@@ -74,8 +73,8 @@
 					<div class="row">
 						<div class="small-1 columns">
 							<div class="switch tiny">
-								<input type="checkbox" id="darkswitcher">
-								<label for="darkswitcher"></label>
+								<input type="checkbox" class="switch-input" id="darkswitcher">
+								<label for="darkswitcher" class="switch-paddle"></label>
 							</div>
 						</div>
 						<div class="small-11 columns">
@@ -85,8 +84,8 @@
 					<div class="row">
 						<div class="small-1 columns">
 							<div class="switch tiny">
-								<input type="checkbox" id="historyswitch">
-								<label for="historyswitch"></label>
+								<input type="checkbox" class="switch-input" id="historyswitch">
+								<label for="historyswitch" class="switch-paddle"></label>
 							</div>
 						</div>
 						<div class="small-4 columns">
@@ -99,8 +98,8 @@
 					<div class="row">
 						<div class="small-1 columns">
 							<div class="switch tiny">
-								<input type="checkbox" id="showservermsgswitch">
-								<label for="showservermsgswitch"></label>
+								<input type="checkbox" class="switch-input" id="showservermsgswitch">
+								<label for="showservermsgswitch" class="switch-paddle"></label>
 							</div>
 						</div>
 						<div class="small-11 columns">
@@ -110,8 +109,8 @@
 					<div class="row">
 						<div class="small-1 columns">
 							<div class="switch tiny">
-								<input type="checkbox" id="clearchatswitch">
-								<label for="clearchatswitch"></label>
+								<input type="checkbox" class="switch-input" id="clearchatswitch">
+								<label for="clearchatswitch" class="switch-paddle"></label>
 							</div>
 						</div>
 						<div class="small-11 columns">
@@ -146,7 +145,7 @@
 					</div>
 				</fieldset>
 			</section>
-			<section role="tabpanel" aria-hidden="true" class="content" id="server">
+			<section role="tabpanel" aria-hidden="true" class="tabs-panel content" id="server">
 
 			</section>
 		</div>
