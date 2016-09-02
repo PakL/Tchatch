@@ -1,11 +1,14 @@
-body, table, .reveal-modal, fieldset > legend {
+body, table, .reveal-modal, fieldset > legend, .tabs-content {
 	background: #222;
 	color: #ddd;
 }
 table {
 	border-color: #111;
 }
-table thead, table tfoot, table tr.even, table tr.alt, table tr:nth-of-type(even) {
+table tbody tr, table tbody tr, table tbody tr {
+	background: #666666;
+}
+table thead, table tfoot, table tbody tr.even, table tbody tr.alt, table tbody tr:nth-of-type(even) {
 	background: #323232;
 }
 table thead tr th, table tbody tr td, table tfoot tr td {
@@ -19,15 +22,15 @@ ul#navigation {
 	background: #222;
 	border-bottom: 1px solid #000;
 }
-.tabs dd > a, .tabs .tab-title > a {
+.tabs dd > a, .tabs .tabs-title > a {
 	background: #323232;
 	color: #ddd;
 }
-.tabs dd.active a, .tabs .tab-title.active a {
+.tabs dd.active a, .tabs .tabs-title.active a {
 	background: #222;
 	color: #ddd;
 }
-.tabs dd > a:hover, .tabs .tab-title > a:hover {
+.tabs dd > a:hover, .tabs .tabs-title > a:hover {
 	background: #434343;
 	color: #ddd;
 }
@@ -65,12 +68,12 @@ fieldset {
 label {
 	color: #ccc;
 }
-.panel {
+.callout {
 	background: #444;
 	color: #ccc;
 	border-color: #000;
 }
-.panel.callout {
+.callout.secondary {
 	background: #001838;
 	color: #ccc;
 	border-color: #000;
