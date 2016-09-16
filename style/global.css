@@ -76,6 +76,7 @@ footer {
 footer .button {
 	float: right;
 	margin-left: 10px;
+	margin-top: 2px;
 }
 
 .content.channel {

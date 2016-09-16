@@ -14,6 +14,7 @@
 		<script type="text/javascript" src="../chart.js/Chart.min.js"></script>
 		
 		<script type="text/javascript">var fs = require("fs");</script>
+		<script type="text/javascript" src="../lib/auth.js"></script>
 		<script type="text/javascript" src="../lib/lang.js"></script>
 
 		<style type="text/css">
@@ -205,7 +206,7 @@
 				}
 				var d = JSON.stringify(data);
 				var req = https.request({
-					"method": "PUT", "host": "api.twitch.tv", "path": "/kraken/channels/"+channel,
+					"method": "PUT", "host": "api.twitch.tv", "path": "/kraken/channels/"+channel+"?client_id="+encodeURIComponent(client_id),
 					"headers": { "Accept": "application/vnd.twitchtv.v3+json", "Authorization": "OAuth "+token, "Content-Type": "application/json", "Content-Length": d.length }
 				}, function(resp){
 					var data = "";
@@ -245,10 +246,15 @@
 				}
 			});
 
+			var follows_cursor = "";
 			var currPage = 1;
 			var followerRefreshTimeout = null;
 			var loadFollower = function(page) {
 				if(typeof(page) == "undefined") page = currPage;
+				var refresh = false;
+				var direc = 'DESC';
+				if(currPage > page) direc = 'ASC';
+				if(currPage == page) { refresh = true; page = 1; }
 				currPage = page;
 				if(followerRefreshTimeout != null) clearTimeout(followerRefreshTimeout);
 				var starttime = Date.parse(new Date());
@@ -257,7 +263,7 @@
 				var offset = (page-1) * 25;
 				$("#pages").find("a").unbind();
 				https.get({
-					"host": "api.twitch.tv", "path": "/kraken/channels/"+channel+"/follows?direction=DESC&limit=25&offset="+offset,
+					"host": "api.twitch.tv", "path": "/kraken/channels/"+channel+"/follows?" +((!refresh && follows_cursor.length > 0) ? "cursor=" + follows_cursor + "&" : "") + "direction="+direc+"&limit=25&client_id="+encodeURIComponent(client_id),
 					"headers": { "Accept": "application/vnd.twitchtv.v3+json" }
 				}, function(resp){
 					var data = "";
@@ -265,6 +271,7 @@
 						data += chunk;
 					}).on("end", function(){
 						var o = JSON.parse(data);
+						follows_cursor = o._cursor;
 						var pages = Math.ceil(o._total/25);
 
 						if(page > 1) $("#followprev").parent().removeClass("unavailable");
