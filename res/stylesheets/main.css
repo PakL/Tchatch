@@ -30,6 +30,8 @@ nav > ul {
 	overflow: hidden;
 	z-index: 999;
 	white-space: nowrap;
+
+	transition: width .25s ease-out;
 }
 nav > ul.bottom {
 	position: absolute;
@@ -98,7 +100,7 @@ div > input {
 	font-size: 1.1em;
 }
 
-.stream_preview {
+stream-preview {
 	background-color: #ddd;
 	background-size: contain;
 	background-position: center top;
@@ -109,40 +111,48 @@ div > input {
 	padding-top: 155px;
 	vertical-align: top;
 }
-.stream_preview > .viewer {
+stream-preview > .channel:before {
+	content: "●";
+	color: red;
+}
+stream-preview > .channel {
 	line-height: 25px;
-	padding-right: 3px;
-	text-align: right;
+	padding: 0 3px;
 	background-color: rgba(0,0,0, 0.5);
 	color: #fff;
 }
-.stream_preview > .title {
+stream-preview > .channel > .viewers {
+	float: right;
+}
+stream-preview > .title {
 	font-weight: bold;
 	padding: 3px;
 }
-.stream_preview > .game {
+stream-preview > .game {
 	font-size: 0.9em;
 	padding: 3px;
 	padding-top: 0;
 }
 
-.modalbg {
+modal {
 	display: table;
 	position: absolute;
 	top: 0; left: 0; right: 0; bottom: 0;
 	width: 100%; height: 100%;
 	z-index: 1000;
 	background: rgba(0,0,0, 0.6);
+
+	transition: opacity .5s ease-in;
 }
-.modalv {
+modal > .modalv {
 	display: table-row;
 	text-align: center;
 }
-.modalh {
+modal > .modalv > .modalh {
 	display: table-cell;
 	vertical-align: middle;
 }
-.modal {
+modal > .modalv > .modalh > .modal {
 	display: inline-block;
 	text-align: left;
 	margin: auto;
@@ -150,16 +160,20 @@ div > input {
 	box-shadow: 0 0 5px rgba(0,0,0, 0.3);
 	padding: 10px;
 }
-.modal > a.modalclose {
+modal > .modalv > .modalh > .modal > a.modalclose {
 	cursor: pointer;
 	float: right;
 	margin-left: 20px;
 }
-.modal > h1 {
+
+modal > .modalv > .modalh > .modal > a.modalclose.notclosable {
+	display: none;
+}
+modal > .modalv > .modalh > .modal > h1 {
 	float: left;
 	margin: 0;
 	margin-bottom: 10px;
 }
-.modal > div {
+modal > .modalv > .modalh > .modal > div {
 	clear: both;
 }

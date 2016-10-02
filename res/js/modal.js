@@ -1,21 +1,15 @@
 let new_modal = function(title, message, closeable) {
 	if(typeof(closeable) != "boolean") closeable = true;
 
-	var modal = $("<div />").addClass("modal");
+	var modal = document.createElement("modal");
+	document.querySelector("body").appendChild(modal);
 
-	if(closeable) {
-		modal.append($("<a />").addClass("modalclose").html("&times;").click(function(){ $(this).parent().parent().parent().parent().fadeOut(function(){$(this).remove();}); }));
-	}
-	modal
-		.append($("<h1 />").text(title))
-		.append($("<div />").html(message.replace(/</g, "&lt;").replace(/\n/g, "<br>")));
-
-	$("body").append( $("<div />").addClass("modalbg").append($("<div />").addClass("modalv").append($("<div />").addClass("modalh").append(modal))).click(function(){ if(closeable) $(this).fadeOut(function(){$(this).remove();}); }) );
+	message = message.replace(/</g, "&lt;").replace(/\n/g, "<br>");
+	riot.mount(modal, {title: title, message: message, closeable: closeable });
 	return modal;
 }
 
 let close_modal = function(modal) {
-	if($(modal).is(".modal")) {
-		$(modal).parent().parent().parent().fadeOut(function(){$(this).remove();});
-	}
+	modal.style.opacity = 0;
+	setTimeout(() => { modal.parentNode.removeChild(modal); }, 500);
 };

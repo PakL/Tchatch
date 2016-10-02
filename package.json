@@ -20,7 +20,8 @@
 	"homepage": "http://paklweb.de/Tchatch/",
 	"devDependencies": {
 		"twitch-api": "0.4.5",
-		"randexp": "=0.4.3",
-		"underscore": "=1.8.3"
+		"randexp": "0.4.3",
+		"underscore": "1.8.3",
+		"riot": "2.6.2"
 	}
 }
