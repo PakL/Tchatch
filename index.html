@@ -2,162 +2,49 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Tchatch</title>
-
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="icomoon/style.css">
-
-		<link rel="stylesheet" type="text/css" href="foundation/foundation.min.css">
-
-		<script type="text/javascript">
-			global.localStorage = window.localStorage;
-		</script>
-
-		<script type="text/javascript" src="foundation/jquery.js"></script>
-		<script type="text/javascript" src="foundation/foundation.min.js"></script>
-
-		<script type="text/javascript" src="lib/main.js"></script>
-		<script type="text/javascript" src="lib/lang.js"></script>
-		<script type="text/javascript" src="lib/options.js"></script>
-		<script type="text/javascript" src="lib/auth.js"></script>
-		<script type="text/javascript" src="lib/twitchchat.js"></script>
-		<script type="text/javascript" src="lib/chathelper.js"></script>
-		<script type="text/javascript" src="lib/chat.js"></script>
-
-		<link rel="stylesheet" type="text/css" href="style/global.css">
+		<title>Tchatch v1</title>
+		<link rel="stylesheet" type="text/css" href="res/stylesheets/main.css">
 	</head>
 	<body>
-		<ul id="navigation" class="tabs" data-tabs>
-			<li class="tabs-title is-active" role="presentational" ><a href="#start" aria-selected="true" controls="start"><span class="icon-home"></span> <span class="lang lang_start"></span></a></li>
-			<li class="tabs-title" role="presentational" ><a href="#server" controls="server" id="opentabserver"><span class="icon-twitch"></span> <span class="lang lang_server"></span></a></li>
-			<li id="channel_game"><span class="lang lang_channel_offline"></span></li>
-			<li id="channel_status"></li>
-			<li id="channel_viewers">0</li>
-		</ul>
-		<div id="content" class="tabs-content" data-tabs-content="navigation" style="padding:10px;">
-			<section role="tabpanel" aria-hidden="false" class="tabs-panel content is-active" id="start">
-				<span class="lang lang_logged_in_as"></span> <span id="userinfo_displayname"><span class="lang lang_not_logged_in"></span></span>.<br>
-				<div class="row" style="margin-top:10px;">
-					<div class="large-12 columns">
-						<div class="row collapse">
-							<div class="small-10 columns">
-								<input type="text" id="joinchannel" disabled>
-							</div>
-							<div class="small-2 columns">
-								<a id="joinbutton" class="button postfix"><span class="lang lang_join"></span></a>
-							</div>
-						</div>
-					</div>
+		<nav>
+			<ul>
+				<li><a class="menu"><span class="icon icon-menu"></span> <span>Tchatch</span></a></li>
+				<li><a class="home" href="#start"><span class="icon icon-home"></span> <span>Start</span></a></li>
+				<li><a href="#server"><span class="icon icon-twitch"></span> <span>Server</span></a></li>
+				<li><a href="#favorites"><span class="icon icon-favorite"></span> <span>Favoriten</span></a></li>
+			</ul>
+			<ul class="bottom">
+				<li><a href="#settings"><span class="icon icon-settings"></span> <span>Einstellungen</span></a></li>
+				<li><a class="loginbtn" href="#user"><span class="icon icon-person"></span> <span>Einloggen</span></a></li>
+			</ul>
+		</nav>
+
+		<section class="content">
+			<div id="start">
+				<div id="start_greeting">Hallo Gast! Ohne einzuloggen kannst du hier zwar Streams gucken, aber um Tchatch in vollen Zügen nutzen zu können solltest du dich einloggen.</div>
+				<div>
+					<input type="search" id="start_search" placeholder="Suche nach Streams">
 				</div>
+				<p id="start_streamsheading">Hier sind ein paar Streams:</p>
+				<div id="start_streams"></div>
+				<div id="start_lazyload" style="height:10px;"></div>
+			</div>
+		</section>
 
-				<div class="callout secondary" id="checkforupdate">
-					<span class="lang lang_please_wait"></span>...
-				</div>
 
-				<div class="callout">
-					<spn class="lang lang_start_infobox"></span>
-				</div>
-				<fieldset>
-					<legend><span class="lang lang_settings"></span></legend>
-					<div class="row">
-						<div class="small-2 columns">
+		<script type="application/javascript" src="node_modules/underscore/underscore-min.js"></script>
 
-						</div>
-						<div class="small-12 columns">
-							<label>
-								<span class="lang lang_language"></span>
-								<select id="languageswitch"></select>
-							</label>
-						</div>
-					</div>
-					<div class="row">
-						<div class="small-1 columns">
-							<div class="switch tiny">
-								<input type="checkbox" class="switch-input" id="darkswitcher">
-								<label for="darkswitcher" class="switch-paddle"></label>
-							</div>
-						</div>
-						<div class="small-11 columns">
-							<label for="darkswitcher"><span class="lang lang_dark_design"></span></label>
-						</div>
-					</div>
-					<div class="row">
-						<div class="small-1 columns">
-							<div class="switch tiny">
-								<input type="checkbox" class="switch-input" id="historyswitch">
-								<label for="historyswitch" class="switch-paddle"></label>
-							</div>
-						</div>
-						<div class="small-4 columns">
-							<label for="historyswitch"><span class="lang lang_record_history"></span></label>
-						</div>
-						<div class="small-7 columns">
-							<a class="button tiny" id="openhistory"><span class="lang lang_open_history_folder"></span></a>
-						</div>
-					</div>
-					<div class="row">
-						<div class="small-1 columns">
-							<div class="switch tiny">
-								<input type="checkbox" class="switch-input" id="showservermsgswitch">
-								<label for="showservermsgswitch" class="switch-paddle"></label>
-							</div>
-						</div>
-						<div class="small-11 columns">
-							<label for="showservermsgswitch"><span class="lang lang_show_server_msgs_switch"></span></label>
-						</div>
-					</div>
-					<div class="row">
-						<div class="small-1 columns">
-							<div class="switch tiny">
-								<input type="checkbox" class="switch-input" id="clearchatswitch">
-								<label for="clearchatswitch" class="switch-paddle"></label>
-							</div>
-						</div>
-						<div class="small-11 columns">
-							<label for="clearchatswitch"><span class="lang lang_clear_chat_switch"></span></label>
-						</div>
-					</div>
-					<div class="row">
-						<div class="small-12 columns">
-							<a class="button" data-open="highlightOptions"><span class="lang lang_set_highlights"></span></a>
-						</div>
-					</div>
-					<div id="highlightOptions" class="reveal" data-reveal aria-labelledby="highlightTitle" aria-hidden="true" role="dialog">
-						<h2 id="highlightTitle"><span class="lang lang_highlights"></span></h2>
-						<p><span class="lang lang_highlight_info"></span></p>
-						<table style="width:100%;">
-							<thead>
-								<tr>
-									<th><span class="lang lang_highlight_search_for"></span></th>
-									<th><span class="lang lang_highlight_word"></span></th>
-									<th><span class="lang lang_highlight_message"></span></th>
-									<th><span class="lang lang_highlight_color"></span></th>
-									<th><span class="icon-bin"></span></th>
-								</tr>
-							</thead>
-							<tfoot>
-								<tr><td colspan="5" style="text-align:right;"><a class="button tiny" style="margin:0;" id="optHighlightAdd"><span class="lang lang_add_highlight"></span></a></td></tr>
-							</tfoot>
-							<tbody id="optHighlightData">
-							</tbody>
-						</table>
-						<a class="close-button" data-close>&#215;</a>
-					</div>
-				</fieldset>
-			</section>
-			<section role="tabpanel" aria-hidden="true" class="tabs-panel content" id="server">
+		<script type="application/javascript" src="res/js/jquery.min.js"></script>
+		<script type="application/javascript" src="res/js/jquery.isinview.min.js"></script>
+		<script type="application/javascript" src="res/js/menu.js"></script>
+		<script type="application/javascript" src="res/js/modal.js"></script>
 
-			</section>
-		</div>
-		<footer>
-			<span id="status"><span class="lang lang_loading_document"></span>...</span>
-			<a class="button tiny success disabled" id="openmanager"><span class="lang lang_channel_manager"></span></a>
-			<a class="button tiny disabled" id="showstream"><span class="lang lang_show_stream"></span></a>
-		</footer>
+		<script type="application/javascript" src="lib/auth.js"></script>
 
-		<script type="text/javascript">
-			$(document).foundation();
-			fillLanguage();
-		</script>
+		<script type="application/javascript" src="lib/pages/start.js"></script>
+		<script type="application/javascript" src="lib/pages/user.js"></script>
+
+		
+		<script type="application/javascript" src="lib/main.js"></script>
 	</body>
 </html>

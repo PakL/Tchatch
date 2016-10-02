@@ -1,0 +1,165 @@
+@import url('../icomoon/style.css');
+
+html, body {
+	background: #fff;
+	font-family: Sans-serif;
+	color: #000;
+	font-size: 12pt;
+
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	display: block;
+	position: absolute;
+	z-index: 998;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background-color: #eee;
+	font-size: 1.4em;
+}
+
+nav > ul {
+	display: block;
+	width: 52px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	z-index: 999;
+	white-space: nowrap;
+}
+nav > ul.bottom {
+	position: absolute;
+	bottom: 0;
+}
+
+nav > ul > li > a {
+	padding: 8px;
+	display: block;
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+nav > ul > li > a:hover {
+	background-color: #ddd;
+}
+nav > ul > li > a.menu {
+	font-weight: bold;
+	text-transform: uppercase;
+	background-color: #f4f4f4;
+}
+nav > ul > li > a > span {
+	vertical-align: middle;
+	margin-right: 8px;
+}
+nav > ul > li > a > span:nth-child(1) {
+	font-size: 1.6em;
+}
+nav > ul > li > a > span.icon.logo {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background-size: 36px 36px;
+}
+
+section.content {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 52px;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+section.content > div {
+	display: none;
+	padding: 10px;
+}
+
+#start_greeting {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+div > input {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 5px;
+	border: 1px solid #6e132a;
+	font-family: Sans-serif;
+	font-size: 1.1em;
+}
+
+.stream_preview {
+	background-color: #ddd;
+	background-size: contain;
+	background-position: center top;
+	background-repeat: no-repeat;
+	display: inline-block;
+	margin-right: 10px; margin-bottom: 10px;
+	width: 320px;
+	padding-top: 155px;
+	vertical-align: top;
+}
+.stream_preview > .viewer {
+	line-height: 25px;
+	padding-right: 3px;
+	text-align: right;
+	background-color: rgba(0,0,0, 0.5);
+	color: #fff;
+}
+.stream_preview > .title {
+	font-weight: bold;
+	padding: 3px;
+}
+.stream_preview > .game {
+	font-size: 0.9em;
+	padding: 3px;
+	padding-top: 0;
+}
+
+.modalbg {
+	display: table;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	width: 100%; height: 100%;
+	z-index: 1000;
+	background: rgba(0,0,0, 0.6);
+}
+.modalv {
+	display: table-row;
+	text-align: center;
+}
+.modalh {
+	display: table-cell;
+	vertical-align: middle;
+}
+.modal {
+	display: inline-block;
+	text-align: left;
+	margin: auto;
+	background: #fff;
+	box-shadow: 0 0 5px rgba(0,0,0, 0.3);
+	padding: 10px;
+}
+.modal > a.modalclose {
+	cursor: pointer;
+	float: right;
+	margin-left: 20px;
+}
+.modal > h1 {
+	float: left;
+	margin: 0;
+	margin-bottom: 10px;
+}
+.modal > div {
+	clear: both;
+}
