@@ -6,11 +6,11 @@
 	"main": "index.html",
 	"window": {
 		"title": "Tchatch v1",
-		"width": 1080,
+		"width": 960,
 		"height": 768,
 		"icon": "res/icon.png",
-		"min_width": 800,
-		"min_height": 600
+		"min_width": 960,
+		"min_height": 768
 	},
 
 	"author": "PakL",
@@ -18,7 +18,7 @@
 		"url": "https://github.com/PakL/Tchatch/issues"
 	},
 	"homepage": "http://paklweb.de/Tchatch/",
-	"devDependencies": {
+	"dependencies": {
 		"twitch-api": "0.4.5",
 		"randexp": "0.4.3",
 		"underscore": "1.8.3",

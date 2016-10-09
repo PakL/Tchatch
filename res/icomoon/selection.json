@@ -274,6 +274,33 @@
     {
       "icon": {
         "paths": [
+          "M726 896v-86h84v86h-84zM554 896v-86h86v86h-86zM896 554v-84h86v84h-86zM896 896v-86h86c0 46-40 86-86 86zM214 214v-86h84v86h-84zM214 896v-86h84v86h-84zM384 214v-86h86v86h-86zM896 726v-86h86v86h-86zM896 128c46 0 86 40 86 86v170h-428v-256h342zM128 896c-46 0-86-40-86-86h86v86zM42 726v-86h86v86h-86zM384 896v-86h86v86h-86zM42 214c0-46 40-86 86-86v86h-86zM42 554v-84h86v84h-86zM42 384v-86h86v86h-86z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "tab_unselected"
+        ],
+        "defaultCode": 59609,
+        "grid": 24
+      },
+      "attrs": [],
+      "properties": {
+        "order": 14,
+        "ligatures": "tab_unselected",
+        "id": 747,
+        "prevSize": 24,
+        "code": 59609,
+        "name": "tab_unselected"
+      },
+      "setIdx": 0,
+      "setId": 1,
+      "iconIdx": 747
+    },
+    {
+      "icon": {
+        "paths": [
           "M96 0l-96 160v736h256v128h128l128-128h160l288-288v-608h-864zM832 544l-160 160h-160l-128 128v-128h-192v-576h640v416z",
           "M608 256h96v256h-96v-256z",
           "M416 256h96v256h-96v-256z"

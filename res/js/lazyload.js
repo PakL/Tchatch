@@ -2,9 +2,17 @@ let watching_element = null;
 let watching_callback = null;
 let watching_content = document.querySelector(".content");
 
+
+let scrolled_to_bottom = function(scroller, scrollcontent) {
+	if((scroller.offsetHeight + scroller.scrollTop) >= scrollcontent.offsetHeight) {
+		return true;
+	}
+	return false;
+}
+
+
 let watch_check = function() {
-	if((window.innerHeight + watching_content.scrollTop) >= watching_element.offsetHeight) {
-		console.log("Scrolled to bottom");
+	if(scrolled_to_bottom(watching_content, watching_element)) {
 		watching_callback();
 	}
 };

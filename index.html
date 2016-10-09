@@ -3,23 +3,23 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Tchatch v1</title>
+		<link rel="stylesheet" type="text/css" href="res/icomoon/style.css">
 		<link rel="stylesheet" type="text/css" href="res/stylesheets/main.css">
+		<link rel="stylesheet" type="text/css" href="res/stylesheets/color_schema_bright.css">
 
 		<style type="riot"></style>
 	</head>
 	<body>
-		<nav>
-			<ul>
-				<li><a class="menu"><span class="icon icon-menu"></span> <span>Tchatch</span></a></li>
-				<li><a class="home" href="#start"><span class="icon icon-home"></span> <span>Start</span></a></li>
-				<li><a href="#server"><span class="icon icon-twitch"></span> <span>Server</span></a></li>
-				<li><a href="#favorites"><span class="icon icon-favorite"></span> <span>Favoriten</span></a></li>
-			</ul>
-			<ul class="bottom">
-				<li><a href="#settings"><span class="icon icon-settings"></span> <span>Einstellungen</span></a></li>
-				<li><a class="loginbtn" href="#user"><span class="icon icon-person"></span> <span>Einloggen</span></a></li>
-			</ul>
-		</nav>
+		<nav><ul>
+			<li><a class="menu"><span class="icon icon-menu"></span> <span>Tchatch</span></a></li>
+			<li><a class="home" href="#start"><span class="icon icon-home"></span> <span>Start</span></a></li>
+			<li><a href="#server"><span class="icon icon-twitch"></span> <span>Server</span></a></li>
+			<li><a href="#favorites"><span class="icon icon-favorite"></span> <span>Favoriten</span></a></li>
+		</ul>
+		<ul class="bottom">
+			<li><a href="#settings"><span class="icon icon-settings"></span> <span>Einstellungen</span></a></li>
+			<li><a class="loginbtn" href="#user"><span class="icon icon-person"></span> <span>Einloggen</span></a></li>
+		</ul></nav>
 
 		<section class="content">
 			<div id="start">
@@ -28,14 +28,22 @@
 					<input type="search" id="start_search" placeholder="Suche nach Streams">
 				</div>
 				<p id="start_streamsheading">Hier sind ein paar Streams:</p>
-				<div id="start_streams"></div>
+				<stream-list id="start_streams"></stream-list>
 				<div id="start_lazyload" style="height:10px;"></div>
 			</div>
+			<div id="server">
+				<chat id="server_chat" style="font-family:monospace"></chat>
+			</div>
 		</section>
+		<script  type="application/javascript" src="http://player.twitch.tv/js/embed/v1.js"></script>
 
 		<script type="riot/tag" src="res/tags/raw.tag"></script>
 		<script type="riot/tag" src="res/tags/modal.tag"></script>
 		<script type="riot/tag" src="res/tags/stream_preview.tag"></script>
+		<script type="riot/tag" src="res/tags/stream_list.tag"></script>
+		<script type="riot/tag" src="res/tags/message.tag"></script>
+		<script type="riot/tag" src="res/tags/chat.tag"></script>
+		<script type="riot/tag" src="res/tags/stream.tag"></script>
 		<script type="application/javascript" src="node_modules/riot/riot%2Bcompiler.min.js"></script>
 
 		<script type="application/javascript" src="res/js/menu.js"></script>
@@ -43,6 +51,10 @@
 		<script type="application/javascript" src="res/js/lazyload.js"></script>
 
 		<script type="application/javascript" src="lib/auth.js"></script>
+		<script type="application/javascript" src="lib/channel.js"></script>
+		<script type="application/javascript" src="lib/twitchchat.js"></script>
+		<script type="application/javascript" src="lib/chathelper.js"></script>
+		<script type="application/javascript" src="lib/chat.js"></script>
 
 		<script type="application/javascript" src="lib/pages/start.js"></script>
 		<script type="application/javascript" src="lib/pages/user.js"></script>

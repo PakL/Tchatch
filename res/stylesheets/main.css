@@ -1,9 +1,5 @@
-@import url('../icomoon/style.css');
-
 html, body {
-	background: #fff;
 	font-family: Sans-serif;
-	color: #000;
 	font-size: 12pt;
 
 	margin: 0;
@@ -17,7 +13,6 @@ nav {
 	top: 0;
 	left: 0;
 	bottom: 0;
-	background-color: #eee;
 	font-size: 1.4em;
 }
 
@@ -41,17 +36,12 @@ nav > ul.bottom {
 nav > ul > li > a {
 	padding: 8px;
 	display: block;
-	color: #000;
 	text-decoration: none;
 	cursor: pointer;
-}
-nav > ul > li > a:hover {
-	background-color: #ddd;
 }
 nav > ul > li > a.menu {
 	font-weight: bold;
 	text-transform: uppercase;
-	background-color: #f4f4f4;
 }
 nav > ul > li > a > span {
 	vertical-align: middle;
@@ -101,7 +91,6 @@ div > input {
 }
 
 stream-preview {
-	background-color: #ddd;
 	background-size: contain;
 	background-position: center top;
 	background-repeat: no-repeat;
@@ -110,16 +99,14 @@ stream-preview {
 	width: 320px;
 	padding-top: 155px;
 	vertical-align: top;
+	cursor: pointer;
 }
 stream-preview > .channel:before {
 	content: "●";
-	color: red;
 }
 stream-preview > .channel {
 	line-height: 25px;
 	padding: 0 3px;
-	background-color: rgba(0,0,0, 0.5);
-	color: #fff;
 }
 stream-preview > .channel > .viewers {
 	float: right;
@@ -140,7 +127,6 @@ modal {
 	top: 0; left: 0; right: 0; bottom: 0;
 	width: 100%; height: 100%;
 	z-index: 1000;
-	background: rgba(0,0,0, 0.6);
 
 	transition: opacity .5s ease-in;
 }
@@ -156,7 +142,6 @@ modal > .modalv > .modalh > .modal {
 	display: inline-block;
 	text-align: left;
 	margin: auto;
-	background: #fff;
 	box-shadow: 0 0 5px rgba(0,0,0, 0.3);
 	padding: 10px;
 }

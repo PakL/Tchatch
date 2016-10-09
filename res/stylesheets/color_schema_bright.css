@@ -1,0 +1,61 @@
+html, body {
+	background: #fff;
+	color: #000;
+}
+
+nav {
+	background-color: #eee;
+}
+
+nav > ul > li > a {
+	color: #000;
+}
+nav > ul > li > a:hover {
+	background-color: #ddd;
+}
+nav > ul > li > a.menu {
+	background-color: #f4f4f4;
+}
+nav > ul > li > a.active {
+	background-color: #ccc;
+}
+
+div > input {
+	border-color: #6e132a;
+}
+
+stream-preview {
+	background-color: #ddd;
+}
+stream-preview > .channel:before {
+	color: red;
+}
+stream-preview > .channel {
+	background-color: rgba(0,0,0, 0.5);
+	color: #fff;
+}
+
+modal {
+	background: rgba(0,0,0, 0.6);
+}
+modal > .modalv > .modalh > .modal {
+	background: #fff;
+}
+
+
+stream > header {
+	background: #ccc;
+}
+
+stream > .playerdump {
+	background: #bbb;
+}
+
+chat > .user {
+	background: #eee;
+}
+
+chat > .sendmessage > .emoticons {
+	border-color: #000;
+	background: #fff;
+}
