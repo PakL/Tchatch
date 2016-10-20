@@ -1,6 +1,6 @@
 {
 	"name": "tchatch",
-	"version": "0.9.0",
+	"version": "0.9.0-pre",
 	"description": "Twitch.tv chat client build with JavaScript",
 
 	"main": "index.html",
