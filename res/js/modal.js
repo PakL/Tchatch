@@ -4,7 +4,7 @@ let new_modal = function(title, message, closeable) {
 	var modal = document.createElement("modal");
 	document.querySelector("body").appendChild(modal);
 
-	message = message.replace(/</g, "&lt;").replace(/\n/g, "<br>");
+	message = message.replace(/\n/g, "<br>");
 	riot.mount(modal, {title: title, message: message, closeable: closeable });
 	return modal;
 }

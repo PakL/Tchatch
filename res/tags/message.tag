@@ -1,13 +1,14 @@
 <message>
 	<span class="timestamp">{ opts.msg.timestamp }</span>
 	<span class="badges"><raw content={ badges } /></span>
-	<span class="username" style="color:{ opts.msg.color }">{ opts.msg.display_name }</span>
-	<span class="message" name="message"><raw content={ message_msg } /></span>
+	<span class="username" name="username" style="color:{ opts.msg.color }">{ opts.msg.display_name }</span>
+	<span class="message" name="message"><raw content={ message_msg } linkcolor={ message_linkcolor } /></span>
 
 	<style>
 		message {
 			display: block;
 			line-height: 1.5em;
+			margin: 5px 0;
 		}
 		message > .timestamp {
 			color: #777;
@@ -22,7 +23,13 @@
 			font-weight: bold;
 		}
 		message > .username:after {
-			content: ": ";
+			content: ":";
+		}
+		message > .username.action:after {
+			content: "";
+		}
+		message > .message:before {
+			content: " ";
 		}
 		message > .message .d {
 			color: #777;
@@ -46,21 +53,23 @@
 	<script>
 		var self = this;
 		this.message_msg = opts.msg.message;
+		this.message_linkcolor = opts.msg.color;
 		this.badges = "";
 		if(typeof(opts.msg.badges) == "string") {
 			this.badges = opts.msg.badges;
 		}
+		if(typeof(opts.msg.action) == "boolean" && opts.msg.action) {
+			this.username.classList.add("action");
+			if(typeof(opts.msg.color) == "string") {
+				this.message.style.color = opts.msg.color;
+			}
+		}
 
 		this.root.classList.add("user_" + opts.msg.user);
 
+
 		this.on("update", () => {
-			self.message_msg = opts.msg.message;
-		});
-		this.on("mount", () => {
-			var links = self.root.querySelectorAll("a");
-			for(var i = 0; i < links.length; i++) {
-				links[i].style.color = opts.msg.color;
-			}
+			self.message_msg = self.opts.msg.message;
 		});
 	</script>
 </message>

@@ -17,13 +17,14 @@
 			<li><a href="#favorites"><span class="icon icon-favorite"></span> <span>Favoriten</span></a></li>
 		</ul>
 		<ul class="bottom">
+			<li><a href="#closechannel" id="closechannel"><span class="icon icon-power_settings_new"></span> <span>Kanal schließen</span></a></li>
 			<li><a href="#settings"><span class="icon icon-settings"></span> <span>Einstellungen</span></a></li>
 			<li><a class="loginbtn" href="#user"><span class="icon icon-person"></span> <span>Einloggen</span></a></li>
 		</ul></nav>
 
 		<section class="content">
 			<div id="start">
-				<div id="start_greeting">Hallo Gast! Ohne einzuloggen kannst du hier zwar Streams gucken, aber um Tchatch in vollen Zügen nutzen zu können solltest du dich einloggen.</div>
+				<div id="start_greeting">Hallo Gast! Ohne dich einzuloggen kannst du hier nicht viel tun.</div>
 				<div>
 					<input type="search" id="start_search" placeholder="Suche nach Streams">
 				</div>
@@ -34,6 +35,12 @@
 			<div id="server">
 				<chat id="server_chat" style="font-family:monospace"></chat>
 			</div>
+			<div id="favorites">
+				<stream-list id="favorites_streams"></stream-list>
+			</div>
+			<div id="settings">
+				<div style="padding:20px;">Gah, sorry bud. There's nothing here, yet.<br>I get to work on that soon.</div>
+			</div>
 		</section>
 		<script  type="application/javascript" src="http://player.twitch.tv/js/embed/v1.js"></script>
 
@@ -41,6 +48,7 @@
 		<script type="riot/tag" src="res/tags/modal.tag"></script>
 		<script type="riot/tag" src="res/tags/stream_preview.tag"></script>
 		<script type="riot/tag" src="res/tags/stream_list.tag"></script>
+		<script type="riot/tag" src="res/tags/statistic.tag"></script>
 		<script type="riot/tag" src="res/tags/message.tag"></script>
 		<script type="riot/tag" src="res/tags/chat.tag"></script>
 		<script type="riot/tag" src="res/tags/stream.tag"></script>
@@ -57,8 +65,10 @@
 		<script type="application/javascript" src="lib/chat.js"></script>
 
 		<script type="application/javascript" src="lib/pages/start.js"></script>
+		<script type="application/javascript" src="lib/pages/favorites.js"></script>
 		<script type="application/javascript" src="lib/pages/user.js"></script>
 		
 		<script type="application/javascript" src="lib/main.js"></script>
+		<script type="application/javascript" src="lib/changelog.js"></script>
 	</body>
 </html>

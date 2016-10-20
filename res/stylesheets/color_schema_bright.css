@@ -52,10 +52,21 @@ stream > .playerdump {
 }
 
 chat > .user {
-	background: #eee;
+	background: #e4e3e6;
+}
+
+chat > .chatmessages {
+	background-color: #efeef1;
+}
+chat > .sendmessage {
+	background-color: #efeef1;
 }
 
 chat > .sendmessage > .emoticons {
 	border-color: #000;
 	background: #fff;
+}
+
+statistic {
+	background-color: #bbb;
 }

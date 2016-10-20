@@ -58,6 +58,33 @@
     {
       "icon": {
         "paths": [
+          "M516 792c204-184 338-306 338-430 0-86-64-148-150-148-66 0-130 42-152 100h-80c-22-58-86-100-152-100-86 0-150 62-150 148 0 124 134 246 338 430l4 4zM704 128c132 0 234 102 234 234 0 162-144 292-364 492l-62 56-62-54c-220-200-364-332-364-494 0-132 102-234 234-234 74 0 146 36 192 90 46-54 118-90 192-90z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "favorite_border"
+        ],
+        "defaultCode": 59518,
+        "grid": 24
+      },
+      "attrs": [],
+      "properties": {
+        "order": 18,
+        "ligatures": "favorite_border",
+        "id": 270,
+        "prevSize": 24,
+        "code": 59518,
+        "name": "favorite_border"
+      },
+      "setIdx": 0,
+      "setId": 1,
+      "iconIdx": 270
+    },
+    {
+      "icon": {
+        "paths": [
           "M768 170h128v342h-342v384c0 24-18 42-42 42h-86c-24 0-42-18-42-42v-470h426v-170h-42v42c0 24-18 44-42 44h-512c-24 0-44-20-44-44v-170c0-24 20-42 44-42h512c24 0 42 18 42 42v42z"
         ],
         "attrs": [],
@@ -287,7 +314,7 @@
       },
       "attrs": [],
       "properties": {
-        "order": 14,
+        "order": 17,
         "ligatures": "tab_unselected",
         "id": 747,
         "prevSize": 24,

@@ -45,7 +45,9 @@ let menu_click = function(e) {
 		this.classList.add("active");
 
 		if(opencontent.substr(0, 8) == "channel_") {
-			document.querySelector("#" + opencontent)._tag.tplayer.setMuted(true);
+			var ch = document.querySelector("#" + opencontent);
+			if(ch != null) ch._tag.tplayer.setMuted(true);
+			document.querySelector("#closechannel").style.display = "none";
 		}
 		if(typeof(menulistener[opencontent+" leaving"]) != "undefined") {
 			for(var i = 0; i < menulistener[opencontent+" leaving"].length; i++) {
@@ -65,7 +67,12 @@ let menu_click = function(e) {
 
 		
 		if(href.substr(0, 8) == "channel_") {
-			document.querySelector("#" + href)._tag.tplayer.setMuted(false);
+			var ch = document.querySelector("#" + href);
+			if(ch != null) {
+				ch._tag.tplayer.setMuted(false);
+				ch._tag.resizeplayerdump();
+			}
+			document.querySelector("#closechannel").style.display = "block";
 		}
 
 		opencontent = href;

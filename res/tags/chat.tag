@@ -11,7 +11,7 @@
 	<div class="sendmessage" name="sendmessage" style="display:none">
 		<div class="emoticons" name="emoticons" style="display:none">
 			<div class="emoticon_sets" each={ e in emotes }>
-				<a each={ e }><span style="background-image:url(http://static-cdn.jtvnw.net/emoticons/v1/{ id }/1.0)" data-code={ code } title={ code } onclick={ addemote }></a>
+				<a each={ e }><span style="background-image:url(http://static-cdn.jtvnw.net/emoticons/v1/{ id }/1.0)" data-code={ code } title={ code } onclick={ addemote } class="ignoreemothide"></a>
 			</div>
 		</div>
 		<input type="text" name="sendmessage_inp" placeholder="Sende eine Nachricht...">
@@ -33,9 +33,11 @@
 			padding: 0;
 			height: 100%;
 			overflow: auto;
+			overflow-wrap: break-word;
+			font-size: 0.9em;
 		}
 		chat > .chatmessages message {
-			margin: 0 10px;
+			margin: 5px 10px;
 		}
 		chat > .chatmessages.compact {
 			float: right;
@@ -77,6 +79,7 @@
 			top: -300px;
 			box-shadow: 0 2px 5px rgba(0,0,0, 0.5);
 			text-align: center;
+			z-index: 101;
 		}
 		chat > .sendmessage > .emoticons > .emoticon_sets {
 			padding: 10px 0;
@@ -92,14 +95,14 @@
 		}
 		chat > .sendmessage > input {
 			position: absolute;
-			bottom: 1px;
+			bottom: 0px;
 			padding-right: 60px;
 		}
 		chat > .sendmessage > .btns {
 			font-size: 1.3em;
 			position: absolute;
 			right: 5px;
-			bottom: 5px;
+			bottom: 4px;
 		}
 		chat > .sendmessage > .btns > a {
 			float: right;
@@ -145,7 +148,7 @@
 				self.sendmessage.style.display = "block";
 			}
 			if(self.chatmessages.scrollTop == self.lastscolltop) {
-				self.chatmessages.scrollTop = (self.chatmessages.childNodes[0].offsetHeight - self.chatmessages.offsetHeight);
+				self.chatmessages.scrollTop = self.chatmessages.childNodes[0].offsetHeight;
 				self.lastscolltop = self.chatmessages.scrollTop;
 			}
 			self.updating = false;
@@ -170,7 +173,7 @@
 				var c = 0;
 				for(var i = 0; i < self.messages.length; i++) {
 					if(self.messages[i].user == username) {
-						self.messages[i].message = "<span class=\"d\">Nachricht wurde gelöscht</span>";
+						self.messages[i].message = "<span class=\"d\">&lt;Nachricht gelöscht&gt;</span>";
 						c++;
 					}
 				}
@@ -225,14 +228,12 @@
 				if(c) {
 					self.chatmessages.classList.add("compact");
 					self.user.style.display = "none";
-					self.chatmessages.style.wordBreak = "break-all";
 					self.sendmessage.style.width = "300px";
 					self.sendmessage.style.left = "calc(100% - 300px)";
 					self.sendmessage.style.clear = "both";
 				} else {
 					self.chatmessages.classList.remove("compact");
 					self.user.style.display = "block";
-					self.chatmessages.style.wordBreak = "normal";
 					self.sendmessage.style.width = "calc(100% - 300px)";
 					self.sendmessage.style.left = "0";
 					self.sendmessage.style.clear = "none";
@@ -265,9 +266,10 @@
 
 		send_message() {
 			if(self._chat == null) return;
+			if(self.sendmessage_inp.hasAttribute("readonly")) return;
 
 			var m = self.sendmessage_inp.value;
-			self.sendmessage_inp.setAttribute("disabled", "disabled");
+			self.sendmessage_inp.setAttribute("readonly", "readonly");
 			self._chat.sendmsg(self._channel, m);
 		}
 
@@ -278,7 +280,7 @@
 		}
 		setmessageavail() {
 			self.sendmessage_inp.value = "";
-			self.sendmessage_inp.removeAttribute("disabled");
+			self.sendmessage_inp.removeAttribute("readonly");
 		}
 	</script>
 </chat>

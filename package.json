@@ -1,6 +1,6 @@
 {
 	"name": "tchatch",
-	"version": "1.0.0",
+	"version": "0.9.0",
 	"description": "Twitch.tv chat client build with JavaScript",
 
 	"main": "index.html",
@@ -21,7 +21,18 @@
 	"dependencies": {
 		"twitch-api": "0.4.5",
 		"randexp": "0.4.3",
-		"underscore": "1.8.3",
-		"riot": "2.6.2"
+		"riot": "2.6.4",
+		"md5-file": "3.1.1"
+	},
+
+	"nwjsBuilder": {
+		"productName": "Tchatch",
+		"productVersion": "0.9.0",
+		"fileDescription": "Twitch chat desktop application",
+
+		"copyright": "2016 (c) Copyright by paklweb.de",
+		"fileVersion": "0.9.0",
+		"companyName": "pakLWeb",
+		"originalFilename": "Tchatch.exe"
 	}
 }
