@@ -1,4 +1,7 @@
 # Tchatch
+
+### Discontinued for now. May come back later to it, when I find the time.
+
 Tchatch ist eine Twitch-Chat-Oberfläche programmiert in JavaScript.
 
 ### Erstellt mit Hilfe von
